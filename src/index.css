@@ -1,0 +1,36 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: system-ui, sans-serif;
+}
+
+/* Default: no frame */
+.device-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  position: static;
+}
+
+/* Desktop and tablets — apply phone frame */
+@media (min-width: 768px) {
+  .device-frame {
+    width: 414px;
+    height: 896px;
+    border: 12px solid #999;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto; /* center on desktop */
+  }
+}
